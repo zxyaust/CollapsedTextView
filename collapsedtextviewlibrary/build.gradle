@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -22,4 +22,28 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
+}
+//发布到bintray
+publish {
+    userOrg = 'zxyaust'
+    groupId = 'com.z'
+    artifactId = 'CollapsedTextView'
+    publishVersion = '1.0.0'
+    desc = 'collapsed textview'
+    website = 'https://github.com/zxyaust/CollapsedTextView'
+}
+//下面是要发布到bintray话运行的命令,可以不用clean和build,手动执行过之后直接bintrayUpload即可
+/*gradlew clean build bintrayUpload
+-PbintrayUser=你的bintray账号名
+-PbintrayKey=xxxxxxxxxxxxxxxxxxxxxx
+-PdryRun=false*/
+//发布到bintray
+android {
+    lintOptions {
+        abortOnError false
+    }
+}
+//发布到bintray
+task javadoc(type: Javadoc) {
+    options.encoding = "utf-8"
 }
