@@ -1,0 +1,2 @@
+# CollapsedTextView
+可折叠的textview,支持重新设置text内容之后还能折叠
