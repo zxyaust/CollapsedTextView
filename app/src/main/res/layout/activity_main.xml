@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="展开" />
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重新设置text内容" />
+
+    <z.collapsedtextviewlibrary.CollapsedTextView
+        android:id="@+id/tv"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:maxLines="6"
+        android:text="!Hello World!Hello World!Herld!" />
+</LinearLayout>
